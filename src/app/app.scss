@@ -1,0 +1,63 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.site-header,
+.site-footer {
+  flex-shrink: 0;
+  padding: 1rem 1.5rem;
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  nav a {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 1rem;
+
+    &.active,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.site-main {
+  flex: 1;
+  min-height: 0;   // lets the flex child shrink instead of pushing the footer off screen
+  overflow: auto;  // only scrolls inside <main> if content truly doesn't fit
+  display: flex;
+  flex-direction: column;
+}
+
+.site-footer {
+  text-align: center;
+  font-size: 0.875rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+   height: 100vh;
+    width: 100vw;
+    min-height: 100vh;
+}

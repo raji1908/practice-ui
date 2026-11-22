@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  flex: 1 0 auto;    // fills <main>, but never shrinks below its content, so <main> scrolls instead
+}
+
+.login {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  // centers the form when there is spare space
+  background: linear-gradient(135deg, #c7d2fe 0%, #e9d5ff 50%, #fbcfe8 100%);
+  padding: 2rem;
+}
+
+label[for="username"],
+label[for="password"] {
+
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  margin-right: 0.5rem;   
+}
+
+.form-control {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+button[type="submit"] {
+    padding: 0.5rem 1rem;
+    background-color: #042554;
+    color: #f9fafb;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 1rem auto 0;  // auto left/right margins center a block element within the form
+}
